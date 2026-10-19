@@ -72,7 +72,7 @@ Edit `.env` and fill in your keys:
 GROQ_API_KEY=your_groq_api_key_here
 HF_TOKEN=your_huggingface_token_here
 ```
-
+In case you made a virtual environment, activate it: .venv\Scripts\activate
 **3. Ingest data into Chroma**
 
 Run the three ingestion scripts once to build the vector store:

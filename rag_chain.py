@@ -1,6 +1,6 @@
 """
 Builds the RAG chain:
-  merged retriever → prompt → Qwen3-32B on Groq → string output
+  merged retriever → prompt → gpt → string output
 """
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -43,7 +43,7 @@ def build_chain():
     ])
 
     llm = ChatGroq(
-        model="qwen/qwen3-32b",
+        model="openai/gpt-oss-120b",
         temperature=0,
         max_tokens=None,
         reasoning_format="parsed",
